@@ -168,6 +168,7 @@
 	<center>
 		<br>
 		<table align=center width=1000px style="font-size:20px">
+			<center><h1>Example forecasts for z500 WeatherBench</h1></center>
 			<tr>
 				<td width=400px>
 					<center>
@@ -178,7 +179,7 @@
 			</tr>
 			<br>
 			<td style="text-align: justify;">
-				Illustration of an example 5-day forecast of geopotential at 500hPa with 6-hourly updates.
+				Illustration of an example 5-day forecast of geopotential height at 500hPa with 6-hourly updates.
 				Each ensemble member is given a different random noise and then evaluated at each time step,
 				without ever seeing its own predictions.
 			</td>
@@ -186,54 +187,106 @@
 	</center>
 
 	<hr>
+	<center><h1>Example forecasts for Quasi- Geostrophic model</h1></center>
+
+	<br>
 
 	<table align="center" width="1000px" style="font-size:20px">
-		<center><h1>Continuous Forecasting</h1></center>
 		<tr>
 			<td width="250px">
 				<center>
-					<br>
 					<span>Truth</span>
 				</center>
 			</td>
 			<td width="250px">
 				<center>
-					<br>
 					<span>Sample #1</span>
 				</center>
 			</td>
 			<td width="250px">
 				<center>
-					<br>
 					<span>Sample #2</span>
 				</center>
 			</td>
 			<td width="250px">
 				<center>
-					<br>
 					<span>Sample #3</span>
 				</center>
 			</td>
 		</tr>
 	</table>
-
-	<table align=center width=1000px style="font-size:20px">
+	
+	<table align="center" width="1000px" style="font-size:20px; margin-top: 0;">
 		<tr>
-			<td width=400px>
+			<td width="1000px">
 				<center>
 					<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/truth-dir-1-2-3.gif"/>
-					<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
 				</center>
 			</td>
 		</tr>
-
-		<br>
-		<td style="text-align: justify;">
-			Illustration of continuous forecasting
-		</td>
 	</table>
 
-	<br> 
+	<table align=center width=900px style="font-size:20px">
+		<tr>
+			<td width=400px>
+				<center>
+					Continuous Ensemble Forecasting (Our method)
+				</center>
+			</td>
+		</tr>
+	</table>
+	
+	
+	<br>
+	<br>
+
+	<table align="center" width="1000px" style="font-size:20px">
+		<tr>
+			<td width="250px">
+				<center>
+					<span>Truth</span>
+				</center>
+			</td>
+			<td width="250px">
+				<center>
+					<span>Sample #1</span>
+				</center>
+			</td>
+			<td width="250px">
+				<center>
+					<span>Sample #2</span>
+				</center>
+			</td>
+			<td width="250px">
+				<center>
+					<span>Sample #3</span>
+				</center>
+			</td>
+		</tr>
+	</table>
+	
+	<table align="center" width="1000px" style="font-size:20px; margin-top: 0;">
+		<tr>
+			<td width="1000px">
+				<center>
+					<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/truth-iter-1-2-3.gif"/>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<table align=center width=900px style="font-size:20px">
+		<tr>
+			<td width=400px>
+				<center>
+					Iterative Forecasting (Same network but sampled autoreressively)
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
 
 	<table align=center width=900px style="font-size:20px">
 		<tr>
