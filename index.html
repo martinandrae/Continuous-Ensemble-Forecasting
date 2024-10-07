@@ -3,7 +3,7 @@
 		<!-- font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;  -->
 <style type="text/css">
 	body {
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 		font-weight:300;
 		font-size:26px;
 		margin-left: auto;
@@ -118,10 +118,10 @@
 
 <html>
 <head>
-	<title>Continuous Ensemble Forecasting with Diffusion</title>
+	<title>Continuous Ensemble Weather Forecasting with Diffusion models</title>
 	<meta property="og:image" content="./resources/method_diagram.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="Continuous Ensemble Forecasting with Diffusion" />
-	<meta property="og:description" content="Continuous Ensemble Forecasting with Diffusion" />
+	<meta property="og:title" content="Continuous Ensemble Weather Forecasting with Diffusion" />
+	<meta property="og:description" content="Continuous Ensemble Weather Forecasting with Diffusion" />
 
 	<!-- Get from Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -138,11 +138,11 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Continuous Ensemble Forecasting with Diffusion</span>
+		<span style="font-size:36px">Continuous Ensemble Weather Forecasting with Diffusion models</span>
 		<br>
 		<br>
 		<table align=center width=1500px>
-			<table align=center width=500px>
+			<table align=center width=1000px>
 				<tr>
 					<td align=center width=100px>
 						<center>
@@ -152,6 +152,16 @@
 					<td align=center width=100px>
 						<center>
 							<span style="font-size:26px">Tomas Landelius<sup>2</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:26px">Joel Oskarsson<sup>1</sup></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:26px">Fredrik Lindsten<sup>1</sup></span>
 						</center>
 					</td>
 				</tr>
@@ -168,21 +178,124 @@
 	<center>
 		<br>
 		<table align=center width=1000px style="font-size:20px">
-			<center><h1>Example forecasts for z500 WeatherBench</h1></center>
+			<center><h1>Example forecasts for WeatherBench</h1></center>
+			Example 10-day forecasts with 6h resolution and 50 ensemble members.
+			<br>
+			Forecasts are done with the ARCI-24/6h model, iterating on 24h and interpolating on 6h.				
 			<tr>
 				<td width=400px>
 					<center>
-						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-500hPa.gif"/>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-t850.gif"/>
+						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
+					
+					</center>
+				</td>
+			</tr>
+			<br>
+
+			<td style="text-align: center;">
+				Temperature at 850hPa (t850)
+			</td>
+
+			<br>
+			<br>		
+
+			<tr>
+				<td width=400px>
+					<center>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-z500.gif"/>
 						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
 					</center>
 				</td>
 			</tr>
 			<br>
-			<td style="text-align: justify;">
-				Illustration of an example 5-day forecast of geopotential height at 500hPa with 6-hourly updates.
-				Each ensemble member is given a different random noise and then evaluated at each time step,
-				without ever seeing its own predictions.
+			<td style="text-align: center;">
+				Geopotential at 500hPa (z500)
 			</td>
+
+			<br>
+			<br>
+		
+
+			<tr>
+				<td width=400px>
+					<center>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-t2m.gif"/>
+						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
+					</center>
+				</td>
+			</tr>
+			<br>
+			<td style="text-align: center;">
+				Temperature at 2m (t2m)
+			</td>
+
+			<br>
+			<br>
+		
+
+			<tr>
+				<td width=400px>
+					<center>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-t2m.gif"/>
+						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
+					</center>
+				</td>
+			</tr>
+			<br>
+			<td style="text-align: center;">
+				Temperature at 2m (t2m)
+			</td>
+
+			<br>
+			<br>
+		
+			<tr>
+				<td width=400px>
+					<center>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-u10.gif"/>
+						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
+					</center>
+				</td>
+			</tr>
+			<br>
+			<td style="text-align: center;">
+				U-wind component (u10)
+			</td>
+
+			<br>
+			<br>
+
+			<tr>
+				<td width=400px>
+					<center>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-v10.gif"/>
+						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
+					</center>
+				</td>
+			</tr>
+			<br>
+			<td style="text-align: center;">
+				V-wind component (v10)
+			</td>
+
+			<br>
+			<br>
+		
+			<tr>
+				<td width=400px>
+					<center>
+						<img style="width:1000px; height:auto; margin-bottom: 15px;" src="./resources/animation-ws10.gif"/>
+						<!-- <object type="application/pdf" data="./resources/cover.jpg" width="1000px"></object> -->
+					</center>
+				</td>
+			</tr>
+			<br>
+			<td style="text-align: center;">
+				Windspeed at 10m (ws10)
+			</td>
+
+
 		</table>
 	</center>
 

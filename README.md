@@ -1,3 +1,2 @@
-# Continuous Ensemble Forecasting with Diffusion
-
+# Continuous Ensemble Weather Forecasting with Diffusion models
 Code coming soon
