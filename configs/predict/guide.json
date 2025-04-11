@@ -1,0 +1,10 @@
+{
+    "name":         "Name to save the prediction and metrics",
+    "model":        "Model name",
+    "batch_size":   "Batch size",
+    "spacing":      "Use a larger number to subsample the data in time",
+    "t_max":        "Maximum time the model forecasts",
+    "t_direct":     "Shortest time the model forecasts",
+    "t_iter":       "Time to iterate on",
+    "n_ens":        "Number of ensemble members"
+}

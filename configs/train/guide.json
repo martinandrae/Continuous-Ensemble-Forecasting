@@ -1,0 +1,13 @@
+{
+    "name":                 "Model name",
+    "batch_size":           "Batch size",
+    "filters":              "Filter scaling in UNet",
+    "weight_decay":         "Weight Decay",
+    "learning_rate":        "Learning Rate",
+    "num_epochs":           "Number of epochs",
+    "spacing":              "Use a larger number to subsample the data in time",
+    "t_max":                "Maximum time the model forecasts",
+    "conditioning_times":   "Previous timesteps to condition on",
+    "delta_t":              "Timestep of model",
+    "model":                "options are continuous or autoregressive"
+    }

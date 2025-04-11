@@ -1,0 +1,10 @@
+{
+    "name": "continuous-24+1h",
+    "model": "continuous-24+1h-[0, -24]",
+    "batch_size": 35,
+    "spacing": 1,
+    "t_max": 240,
+    "t_direct": 1,
+    "t_iter": 24,
+    "n_ens": 10
+}

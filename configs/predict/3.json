@@ -1,0 +1,10 @@
+{
+    "name": "iterative-1h",
+    "model": "iterative-1h",
+    "batch_size": 32,
+    "spacing": 1,
+    "t_max": 240,
+    "t_direct": 1,
+    "t_iter": 1,
+    "n_ens": 10
+}

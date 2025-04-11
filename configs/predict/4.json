@@ -1,0 +1,10 @@
+{
+    "name": "iterative-6h",
+    "model": "iterative-6h",
+    "batch_size": 128,
+    "spacing": 1,
+    "t_max": 240,
+    "t_direct": 6,
+    "t_iter": 6,
+    "n_ens": 50
+}

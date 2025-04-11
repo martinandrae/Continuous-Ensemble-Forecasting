@@ -1,0 +1,10 @@
+{
+    "name": "iterative-24h-one-batch-test",
+    "model": "iterative-24h",
+    "batch_size": 1,
+    "spacing": 10000,
+    "t_max": 240,
+    "t_direct": 24,
+    "t_iter": 24,
+    "n_ens": 10
+}
