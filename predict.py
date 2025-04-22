@@ -125,7 +125,7 @@ else:
 model = EDMPrecond(filters=filters, img_channels=input_times, out_channels=num_variables, img_resolution = 64, time_emb=time_emb, 
                     sigma_data=1, sigma_min=0.02, sigma_max=88)
 
-model.load_state_dict(torch.load(f'{model_directory}/{model_path}/best_model.pth'))
+model.load_state_dict(torch.load(f'{model_directory}/{model_path}/best_model.pth', map_location=device))
 model.to(device)
 
 print(f"Loaded model {model_path}, {model_choice}",  flush=True)
@@ -179,7 +179,7 @@ for previous, current, time_labels in tqdm(loader):
         # Test
         predicted_combined = torch.zeros((n_samples, n_ens, n_times, num_variables, dx, dy), device=device)
 
-        for i in range(n_iter):
+        for i in tqdm(range(n_iter)):
             latents = torch.randn(latent_shape, device=device)
             latents = latents.repeat_interleave(n_direct, dim=0) # Can not be changed if batchsz > 1 or n_ens >1
             
